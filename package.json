@@ -1,6 +1,6 @@
 {
   "name": "infographic-cli",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "description": "Instantly create stunning SVG infographics from simple declarative syntax. Render from strings, files, or stdin.",
   "license": "MIT",
   "author": "lyw405",
@@ -61,5 +61,13 @@
     "templates",
     "graphics",
     "command-line"
-  ]
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lyw405/infographic-cli.git"
+  },
+  "homepage": "https://github.com/lyw405/infographic-cli#readme",
+  "bugs": {
+    "url": "https://github.com/lyw405/infographic-cli/issues"
+  }
 }
